@@ -7,6 +7,7 @@ class Salver extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 170,
+      margin: EdgeInsets.only(bottom: 50),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(50),
@@ -22,16 +23,18 @@ class Salver extends StatelessWidget {
               textAlign: TextAlign.start,
             ),
           ),
-          Container(
-            child: Align(
+          Transform.translate(
+            offset: Offset(0, 28),
+            child: Container(
+                child: Align(
               child: FloatingActionButton(
                 child: Icon(Icons.add),
                 backgroundColor: Colors.red,
                 onPressed: () => print("hello"),
               ),
               alignment: Alignment.bottomCenter,
-            ),
-          )
+            )),
+          ),
         ],
       ),
     );
