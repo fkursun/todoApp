@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/containers/salver.dart';
 import 'package:todo_app/models/global.dart';
 import "./navbar.dart";
-import "./components/salver.dart";
 
 void main() => runApp(MyApp());
 
@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   new Container(
                       color: darkGrey,
                       child: Column(
-                        children: <Widget>[Salver()],
+                        children: <Widget>[SalverContainer()],
                       )),
                   new Container(
                     color: darkGrey,
