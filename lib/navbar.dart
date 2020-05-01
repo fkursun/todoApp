@@ -1,4 +1,7 @@
 import "package:flutter/material.dart";
+import 'package:todo_app/models/global.dart';
+
+import './containers/salver.dart';
 
 class Navbar extends StatelessWidget with PreferredSizeWidget {
   @override
@@ -15,7 +18,7 @@ class Navbar extends StatelessWidget with PreferredSizeWidget {
           icon: new Icon(Icons.perm_identity),
         )
       ],
-      labelColor: Colors.red,
+      labelColor: red,
       unselectedLabelColor: Colors.black,
       indicatorSize: TabBarIndicatorSize.label,
       indicatorColor: Colors.transparent,
