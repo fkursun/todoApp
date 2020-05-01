@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/models/global.dart';
-import "./salver.dart";
 import "./navbar.dart";
+import "./components/salver.dart";
 
 void main() => runApp(MyApp());
 
@@ -25,26 +25,24 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-void func() {}
-
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: Colors.yellow,
       home: SafeArea(
           child: DefaultTabController(
         length: 3,
         child: new Scaffold(
-          resizeToAvoidBottomPadding: false,
           body: Stack(
             children: <Widget>[
               TabBarView(
                 children: [
                   new Container(
-                    color: darkGrey,
-                  ),
+                      color: darkGrey,
+                      child: Column(
+                        children: <Widget>[Salver()],
+                      )),
                   new Container(
                     color: darkGrey,
                   ),
@@ -53,7 +51,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
-              Salver(),
             ],
           ),
           appBar: Navbar(),

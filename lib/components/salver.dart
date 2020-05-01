@@ -1,6 +1,5 @@
-import "package:flutter/material.dart";
-
-import "./models/global.dart";
+import 'package:flutter/material.dart';
+import 'package:todo_app/models/global.dart';
 
 class Salver extends StatelessWidget {
   @override
@@ -29,7 +28,7 @@ class Salver extends StatelessWidget {
                 child: Align(
               child: FloatingActionButton(
                 child: Icon(Icons.add),
-                backgroundColor: Colors.red,
+                backgroundColor: red,
                 onPressed: () => print("hello"),
               ),
               alignment: Alignment.bottomCenter,
