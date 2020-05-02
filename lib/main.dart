@@ -30,19 +30,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SafeArea(
-          child: DefaultTabController(
+      home: DefaultTabController(
         length: 1,
         child: new Scaffold(
+          extendBody: true,
           body: Stack(
             children: <Widget>[
               TabBarView(
                 children: [
-                  new Container(
-                      color: darkGrey,
-                      child: Column(
-                        children: <Widget>[SalverContainer()],
-                      )),
+                  Container(color: darkGrey, child: SalverContainer()),
                 ],
               ),
             ],
@@ -50,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
           appBar: Navbar(),
           backgroundColor: Colors.white,
         ),
-      )),
+      ),
     );
   }
 }

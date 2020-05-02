@@ -8,3 +8,8 @@ TextStyle salverTitle = new TextStyle(
     fontWeight: FontWeight.bold,
     color: darkGrey,
     fontSize: 45);
+TextStyle taskTitle = new TextStyle(
+    fontFamily: "Avenir",
+    fontWeight: FontWeight.w600,
+    fontSize: 25,
+    color: Colors.white);

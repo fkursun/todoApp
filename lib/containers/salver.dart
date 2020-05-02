@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/components/salver.dart';
 import 'package:todo_app/models/global.dart';
-import 'package:todo_app/navbar.dart';
+import 'package:todo_app/components/task.dart';
 
 class SalverContainer extends StatefulWidget {
   @override
@@ -11,52 +11,27 @@ class SalverContainer extends StatefulWidget {
 class _SalverContainerState extends State<SalverContainer> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Column(
+    return Column(
       children: <Widget>[
         Salver(),
         Container(
-          height: MediaQuery.of(context).size.height - 333,
+          padding: EdgeInsets.only(top: 50),
+          height: MediaQuery.of(context).size.height - 216,
           child: ListView(
             children: getList(),
           ),
         )
       ],
-    ));
+    );
   }
 
-  List<Widget> getList() {
-    return [
-      Container(
-        color: Colors.red,
-        height: 100,
-        child: Text("HEllo"),
-      ),
-      Container(
-        color: Colors.white,
-        height: 100,
-        child: Text("HEllo"),
-      ),
-      Container(
-        color: Colors.red,
-        height: 100,
-        child: Text("HEllo"),
-      ),
-      Container(
-        color: Colors.white,
-        height: 100,
-        child: Text("HEllo"),
-      ),
-      Container(
-        color: Colors.red,
-        height: 100,
-        child: Text("HEllo"),
-      ),
-      Container(
-        color: Colors.white,
-        height: 100,
-        child: Text("HEllo"),
-      )
-    ];
+  List<SalverTask> getList() {
+    var list = <SalverTask>[];
+    for (var i = 0; i < 20; i++) {
+      list.add(SalverTask(
+        title: "Hello world",
+      ));
+    }
+    return list;
   }
 }

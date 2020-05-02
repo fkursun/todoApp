@@ -5,8 +5,6 @@ class Salver extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 170,
-      margin: EdgeInsets.only(bottom: 50),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(50),
