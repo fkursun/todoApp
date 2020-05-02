@@ -11,14 +11,8 @@ class Navbar extends StatelessWidget with PreferredSizeWidget {
         Tab(
           icon: new Icon(Icons.home),
         ),
-        Tab(
-          icon: new Icon(Icons.rss_feed),
-        ),
-        Tab(
-          icon: new Icon(Icons.perm_identity),
-        )
       ],
-      labelColor: red,
+      labelColor: Colors.transparent,
       unselectedLabelColor: Colors.black,
       indicatorSize: TabBarIndicatorSize.label,
       indicatorColor: Colors.transparent,

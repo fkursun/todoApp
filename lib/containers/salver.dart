@@ -16,7 +16,7 @@ class _SalverContainerState extends State<SalverContainer> {
       children: <Widget>[
         Salver(),
         Container(
-          height: 300,
+          height: MediaQuery.of(context).size.height - 333,
           child: ListView(
             children: getList(),
           ),
@@ -39,6 +39,21 @@ class _SalverContainerState extends State<SalverContainer> {
       ),
       Container(
         color: Colors.red,
+        height: 100,
+        child: Text("HEllo"),
+      ),
+      Container(
+        color: Colors.white,
+        height: 100,
+        child: Text("HEllo"),
+      ),
+      Container(
+        color: Colors.red,
+        height: 100,
+        child: Text("HEllo"),
+      ),
+      Container(
+        color: Colors.white,
         height: 100,
         child: Text("HEllo"),
       )

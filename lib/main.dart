@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
       debugShowCheckedModeBanner: false,
       home: SafeArea(
           child: DefaultTabController(
-        length: 3,
+        length: 1,
         child: new Scaffold(
           body: Stack(
             children: <Widget>[
@@ -43,12 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(
                         children: <Widget>[SalverContainer()],
                       )),
-                  new Container(
-                    color: darkGrey,
-                  ),
-                  new Container(
-                    color: darkGrey,
-                  ),
                 ],
               ),
             ],

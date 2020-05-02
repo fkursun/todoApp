@@ -13,9 +13,10 @@ class Salver extends StatelessWidget {
               bottomRight: Radius.circular(50)),
           color: Colors.white),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Container(
+            width: double.infinity,
+            padding: EdgeInsets.only(left: 50, top: 50),
             child: Text(
               "Intray",
               style: salverTitle,
@@ -27,7 +28,10 @@ class Salver extends StatelessWidget {
             child: Container(
                 child: Align(
               child: FloatingActionButton(
-                child: Icon(Icons.add),
+                child: Icon(
+                  Icons.add,
+                  size: 50,
+                ),
                 backgroundColor: red,
                 onPressed: () => print("hello"),
               ),
