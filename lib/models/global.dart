@@ -13,3 +13,10 @@ TextStyle taskTitle = new TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 25,
     color: Colors.white);
+
+TextStyle taskTitleCompleted = new TextStyle(
+    fontFamily: "Avenir",
+    fontWeight: FontWeight.w600,
+    fontSize: 25,
+    decoration: TextDecoration.lineThrough,
+    color: Colors.white);

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:todo_app/models/global.dart';
 
 class Salver extends StatelessWidget {
+  Function handleAddTask;
+  Salver({this.handleAddTask});
+  final myController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,14 +16,17 @@ class Salver extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
-            width: double.infinity,
-            padding: EdgeInsets.only(left: 50, top: 50),
-            child: Text(
-              "Intray",
-              style: salverTitle,
-              textAlign: TextAlign.start,
-            ),
-          ),
+              width: double.infinity,
+              padding: EdgeInsets.only(left: 50, top: 50),
+              child: TextField(
+                controller: myController,
+                cursorColor: red,
+                autofocus: true,
+                autocorrect: false,
+                decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Type something to add your list."),
+              )),
           Transform.translate(
             offset: Offset(0, 28),
             child: Container(
@@ -31,7 +37,7 @@ class Salver extends StatelessWidget {
                   size: 50,
                 ),
                 backgroundColor: red,
-                onPressed: () => print("hello"),
+                onPressed: () => handleAddTask(myController),
               ),
               alignment: Alignment.bottomCenter,
             )),
